@@ -1,0 +1,189 @@
+.nav{
+  height: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #191A19;
+
+    .pokemon_container{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .pokemon_card{
+            width: 250px;
+            height: 250px;
+            background-color: #333333;
+            margin: 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 300ms ease-out;
+
+            h5{
+              font-size: 20px;
+              margin: 0;
+              text-transform: capitalize;
+              text-align: center;
+            }
+        }
+        .pokemon_card:hover{
+          cursor: pointer;
+          transform: scale(1.05);
+          transition: all 300ms ease-out;
+        }
+    }
+    .banniere_container{
+      height: 50vh;
+
+      .banniere{
+        max-height: 200px;
+        overflow: hidden;
+      }
+    }
+}
+.pokemon_detail_container{
+  background-color: #191A19;
+  display: flex;
+  justify-content: center;
+
+  h1{
+    text-transform: capitalize;
+    text-align: center;
+  }
+  .detail_card{
+    background-color: #333333;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    padding: 25px 0;
+
+    img{
+      width: 300px;
+    }
+    p{
+      text-transform: capitalize;
+    }
+    .abilities{
+      min-width: 120px;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      padding: 3px 0;
+      text-decoration: none;
+      color: #fff;
+      text-shadow: 1px 1px 2px #000;
+      text-align: center;
+      transition: opacity 0.2s ease;
+      background-color: #c11f1f;
+    }
+  }
+  
+}
+
+.types {
+  &__type {
+    min-width: 120px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 3px 0;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    text-align: center;
+    transition: opacity 0.2s ease;
+    
+    &:visited {
+      color: #fff;
+    }
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+.normal {
+  background-color: #a4acaf;
+}
+.grass {
+  background-color: #9bcc50;
+}
+.fire {
+  background-color: #fd7d24;
+}
+.water {
+  background-color: #4592c4;
+}
+.fighting {
+  background-color: #d56723;
+}
+.flying {
+  background-color: #3dc7ef;
+}
+.poison {
+  background-color: #b97fc9;
+}
+.ground {
+  background-color: #f7de3f;
+}
+.rock {
+  background-color: #a38c21;
+}
+.bug {
+  background-color: #729f3f;
+}
+.ghost {
+  background-color: #7b62a3;
+}
+.electric {
+  background-color: #eed535;
+}
+.psychic {
+  background-color: #f366b9;
+}
+.ice {
+  background-color: #51c4e7;
+}
+.dragon {
+  background-color: #53a4cf;
+}
+.dark {
+  background-color: #707070;
+}
+.steel {
+  background-color: #9eb7b8;
+}
+.fairy {
+  background-color: #fdb9e9;
+}
+  
+  @media (max-width: 600px) {
+    .grid {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .card,
+    .footer {
+      border-color: #222;
+    }
+    .code {
+      background: #111;
+    }
+    .logo img {
+      filter: invert(1);
+    }
+  }
+  

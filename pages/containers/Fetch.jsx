@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-import Link from "next/link";
+import Pokemon from "../components/Pokemon";
+import style from '../../styles/Home.module.scss';
 
 export default function Fetch() {
 
@@ -14,18 +15,12 @@ export default function Fetch() {
 
   if (error) return error;
 
-  return <>
-    {data.results.map((item, index) => (
-    <li key={index}>
-      <Link href={`./components/${item.name}`}>
-        <a>
-          <img src={item.image} alt={item.name} />
-          <span>{index + 1}</span>
-          <h2>{item.name}</h2>
-        </a>
-      </Link>
-    </li>
-    ))}
-  </>;
+  return (
+    <div className={style.pokemon_container}>
+      {data.results.map((item, index) => (
+        <Pokemon key={index} pokemon={item} index={index}/>
+      ))}
+    </div>
+  )
 
 }
