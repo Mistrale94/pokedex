@@ -6,10 +6,9 @@ const Provider = ({ children }) => {
   const [isLoading, setLoading] = useState(true);
   const [hasError, setError] = useState(false);
   const [data, setData] = useState([]);
-
   const [filteredData, setFilteredData] = useState([]);
-
   const [value, setValue] = useState("");
+  const [types, setTypes] = useState([]);
 
   const handleChange = ({ target: { value } }) => {
     setValue(value);
@@ -18,7 +17,7 @@ const Provider = ({ children }) => {
   const fetchApi = async () => {
     try {
       const response = await fetch(
-        "https://pokeapi.co/api/v2/pokemon/?limit=151"
+        "https://pokeapi.co/api/v2/pokemon?limit=100000"
       );
       const data = await response.json();
 
@@ -38,16 +37,32 @@ const Provider = ({ children }) => {
     }
   };
 
+  const fetchTypes = async () => {
+    try {
+      const response = await fetch("https://pokeapi.co/api/v2/type");
+      const pokemonTypes = await response.json();
+
+      setTypes(
+        pokemonTypes.results.filter(
+          (type) => type.name !== "unknown" && type.name !== "shadow"
+        )
+      );
+      setLoading(false);
+
+      return pokemonTypes;
+    } catch (err) {
+      setError(true);
+      throw err;
+    }
+  };
+
   useEffect(() => {
     fetchApi();
+    fetchTypes();
   }, [value]);
 
-  console.log(value)
-
   return (
-    <MainContext.Provider
-      value={{ data, filteredData, handleChange, hasError, isLoading, value }}
-    >
+    <MainContext.Provider value={{ data, filteredData, handleChange, hasError, isLoading, value, types }}>
       {children}
     </MainContext.Provider>
   );

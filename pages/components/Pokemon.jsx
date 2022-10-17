@@ -4,26 +4,27 @@ import Image from 'next/image'
 import style from '../../styles/Home.module.scss'
 import { useEffect, useState } from "react";
 
-const Pokemon = ({name, index}) => {
+const Pokemon = ({name, index, url}) => {
 
-    const [pkmnSprite, setPkmnSprite] = useState();
+  const [pkmnSprite, setPkmnSprite] = useState(url);
 
-    useEffect(() => {
-      const getSprite = () => {
-        const pkmnId = ('00' + (index + 1)).slice(-3)
-          .split("/")
-          .filter((e) => e)
-        setPkmnSprite(
-            `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pkmnId}.png`
-        );
-      };
-      getSprite();
-    }, []);
+  useEffect(() => {
+    const getSprite = () => {
+      const pkmnId = url
+        .split("/")
+        .filter((e) => e)
+        .at(-1);
+      setPkmnSprite(
+        `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pkmnId}.png`
+      );
+    };
+    getSprite();
+  }, []);
 
   return (
     <>
         <li key={index} className={style.pokemon_card}>
-            <Link href={{pathname: "components/[slug]", query: { slug: name }}}>
+            <Link href={{pathname: "[slug]", query: { slug: name }}}>
                 <a>
                     <Image 
                         src={pkmnSprite}

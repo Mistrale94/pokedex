@@ -3,7 +3,44 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  justify-content: space-between;
+  padding: 0 100px;
+  background-color: #191A19;
+
+  img{
+    cursor: pointer;
+  }
+}
+.pokemon_container{
+    width: 100%;
+    padding: 0 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .pokemon_card{
+        width: 250px;
+        height: 250px;
+        background-color: #333333;
+        margin: 10px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 300ms ease-out;
+
+        h5{
+          font-size: 20px;
+          margin: 0;
+          text-transform: capitalize;
+          text-align: center;
+        }
+    }
+    .pokemon_card:hover{
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: all 300ms ease-out;
+    }
 }
 .main{
     display: flex;
@@ -11,43 +48,28 @@
     align-items: center;
     justify-content: center;
     background-color: #191A19;
+    min-height: 100vh;
 
-    .pokemon_container{
-        width: 80%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        .pokemon_card{
-            width: 250px;
-            height: 250px;
-            background-color: #333333;
-            margin: 10px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 300ms ease-out;
-
-            h5{
-              font-size: 20px;
-              margin: 0;
-              text-transform: capitalize;
-              text-align: center;
-            }
-        }
-        .pokemon_card:hover{
-          cursor: pointer;
-          transform: scale(1.05);
-          transition: all 300ms ease-out;
-        }
-    }
     .banniere_container{
       height: 50vh;
 
       .banniere{
         max-height: 200px;
         overflow: hidden;
+      }
+    }
+    .types_container{
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 25px;
+
+      .types_main{
+        margin: 0 5px;
+
+        a{
+          text-transform: capitalize;
+          padding: 5px;
+        }
       }
     }
 }
@@ -169,11 +191,11 @@
 
 .form_container{
   width: 50%;
+  margin-bottom: 25px;
 
   input{
     width: 100%;
     height: 40px;
-    margin-bottom: 25px;
     border-radius: 8px;
     border: 1px solid #333333;
     padding: 0 15px;

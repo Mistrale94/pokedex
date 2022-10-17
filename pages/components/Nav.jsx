@@ -12,8 +12,9 @@ export default function Nav() {
                 className={style.logo}
                 src={logo}
                 alt={'Logo du pokédex'}
-                height={80}
-                width={240}
+                height={75}
+                width={204}
+                unoptimized
             />
         </Link>
     </nav>

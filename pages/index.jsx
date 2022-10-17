@@ -5,8 +5,8 @@ import Header from './containers/Header';
 import Form from './containers/Form';
 import MainContext from "./contexts/Main";
 import Loader from './components/Loader';
-import { useContext, useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import { useContext } from "react";
+import TypesList from './types/TypesList';
 
 export default function Home() {
 
@@ -23,6 +23,7 @@ export default function Home() {
       </Head>
       <Header/>
       <Form handleChange={handleChange} />
+      <TypesList/>
       {isLoading ? <Loader /> : <List data={filteredData} />}
     </div>
   )
