@@ -8,10 +8,6 @@ export default function Header() {
   return (
     <>
       <Nav/>
-      <div className={style.banniere_container}>
-
-      </div>
-      
     </>
   )
 }

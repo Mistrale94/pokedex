@@ -1,9 +1,18 @@
 import Head from 'next/head'
-import Fetch from './containers/Fetch';
+import List from './containers/List';
 import style from '../styles/Home.module.scss'
 import Header from './containers/Header';
+import Form from './containers/Form';
+import MainContext from "./contexts/Main";
+import Loader from './components/Loader';
+import { useContext, useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Home() {
+
+  const { handleChange, filteredData, hasError, isLoading } = useContext(MainContext);
+  
+  if (hasError) return <p>Une erreur est survenue...</p>;
 
   return (
     <div className={style.main}>
@@ -13,20 +22,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <Fetch/>
+      <Form handleChange={handleChange} />
+      {isLoading ? <Loader /> : <List data={filteredData} />}
     </div>
   )
 }
-
-// export const getStaticProps = async () => {
-//   const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
-//   const {results} = await res.json();
-//   const pokemon = results.map((pokeman, index) => {
-//     const paddedId = ('00' + (index + 1)).slice(-3);
-//     const image = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${paddedId}.png`;
-//     return {...pokeman, image};
-//   });
-//   return {
-//     props: {pokemon},
-//   };
-// }

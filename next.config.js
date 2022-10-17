@@ -6,6 +6,9 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    domains: ['assets.pokemon.com'],
+    domains: [
+      'assets.pokemon.com',
+      'pokeapi.co'
+    ],
   },
 }
