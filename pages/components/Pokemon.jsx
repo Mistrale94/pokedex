@@ -24,7 +24,7 @@ const Pokemon = ({name, index, url}) => {
   return (
     <>
         <li key={index} className={style.pokemon_card}>
-            <Link href={{pathname: "[slug]", query: { slug: name }}}>
+            <Link href={{pathname: "/[slug]", query: { slug: name }}}>
                 <a>
                     <Image 
                         src={pkmnSprite}
