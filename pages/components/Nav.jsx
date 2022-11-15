@@ -5,18 +5,18 @@ import style from '../../styles/Home.module.scss'
 import logo from '../../public/logo.png'
 
 export default function Nav() {
-  return (
-    <nav className={style.nav}>
-        <Link href={'/'}>
-            <Image 
-                className={style.logo}
-                src={logo}
-                alt={'Logo du pokédex'}
-                height={75}
-                width={204}
-                unoptimized
-            />
-        </Link>
-    </nav>
-  )
+    return (
+        <nav className={style.nav}>
+            <Link href={'/'}>
+                <Image
+                    className={style.logo}
+                    src={logo}
+                    alt={'Logo du pokédex'}
+                    height={75}
+                    width={204}
+                    unoptimized
+                />
+            </Link>
+        </nav>
+    )
 }

@@ -1,24 +1,24 @@
-.nav{
-  height: 150px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 100px;
-  background-color: #191A19;
+.nav {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    background-color: #191a19;
 
-  img{
-    cursor: pointer;
-  }
+    img {
+        cursor: pointer;
+    }
 }
-.pokemon_container{
+.pokemon_container {
     width: 100%;
     padding: 0 90px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
-    .pokemon_card{
+    .pokemon_card {
         width: 250px;
         height: 250px;
         background-color: #333333;
@@ -29,314 +29,312 @@
         justify-content: center;
         transition: all 300ms ease-out;
 
-        h5{
-          font-size: 20px;
-          margin: 0;
-          text-transform: capitalize;
-          text-align: center;
+        h5 {
+            font-size: 20px;
+            margin: 0;
+            text-transform: capitalize;
+            text-align: center;
         }
     }
-    .pokemon_card:hover{
-      cursor: pointer;
-      transform: scale(1.05);
-      transition: all 300ms ease-out;
+    .pokemon_card:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: all 300ms ease-out;
     }
 }
-.main{
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #191A19;
+    background-color: #191a19;
     min-height: 100vh;
 
-    .banniere_container{
-      height: 50vh;
+    .banniere_container {
+        height: 50vh;
 
-      .banniere{
-        max-height: 200px;
-        overflow: hidden;
-      }
-    }
-    .types_container{
-      display: flex;
-      justify-content: space-evenly;
-      margin-bottom: 25px;
-
-      .types_main{
-        margin: 0 5px;
-
-        a{
-          text-transform: capitalize;
-          padding: 5px;
+        .banniere {
+            max-height: 200px;
+            overflow: hidden;
         }
-      }
+    }
+    .types_container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 25px;
+
+        .types_main {
+            margin: 0 5px;
+
+            a {
+                text-transform: capitalize;
+                padding: 5px;
+            }
+        }
     }
 }
-.pokemon_detail_container{
-  background-color: #191A19;
-  display: flex;
-  justify-content: center;
-
-  h1{
-    text-transform: capitalize;
-    text-align: center;
-  }
-  .detail_card{
-    background-color: #333333;
-    width: 500px;
+.pokemon_detail_container {
+    background-color: #191a19;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 8px;
-    margin-bottom: 50px;
-    padding: 25px 0;
+    justify-content: center;
 
-    img{
-      width: 300px;
+    h1 {
+        text-transform: capitalize;
+        text-align: center;
     }
-    p{
-      text-transform: capitalize;
+    .detail_card {
+        background-color: #333333;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        margin-bottom: 50px;
+        padding: 25px 0;
+
+        img {
+            width: 300px;
+        }
+        p {
+            text-transform: capitalize;
+        }
+        .abilities {
+            min-width: 120px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 3px 0;
+            text-decoration: none;
+            color: #fff;
+            text-shadow: 1px 1px 2px #000;
+            text-align: center;
+            transition: opacity 0.2s ease;
+            background-color: #c11f1f;
+        }
     }
-    .abilities{
-      min-width: 120px;
-      border: 2px solid #fff;
-      border-radius: 10px;
-      padding: 3px 0;
-      text-decoration: none;
-      color: #fff;
-      text-shadow: 1px 1px 2px #000;
-      text-align: center;
-      transition: opacity 0.2s ease;
-      background-color: #c11f1f;
-    }
-  }
-  
 }
 
 .types {
-  &__type {
-    min-width: 120px;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    padding: 3px 0;
-    text-decoration: none;
-    color: #fff;
-    text-shadow: 1px 1px 2px #000;
-    text-align: center;
-    transition: opacity 0.2s ease;
-    
-    &:visited {
-      color: #fff;
+    &__type {
+        min-width: 120px;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        padding: 3px 0;
+        text-decoration: none;
+        color: #fff;
+        text-shadow: 1px 1px 2px #000;
+        text-align: center;
+        transition: opacity 0.2s ease;
+
+        &:visited {
+            color: #fff;
+        }
+        &:hover {
+            opacity: 0.9;
+        }
     }
-    &:hover {
-      opacity: 0.9;
-    }
-  }
 }
 .normal {
-  background-color: #a4acaf;
+    background-color: #a4acaf;
 }
 .grass {
-  background-color: #9bcc50;
+    background-color: #9bcc50;
 }
 .fire {
-  background-color: #fd7d24;
+    background-color: #fd7d24;
 }
 .water {
-  background-color: #4592c4;
+    background-color: #4592c4;
 }
 .fighting {
-  background-color: #d56723;
+    background-color: #d56723;
 }
 .flying {
-  background-color: #3dc7ef;
+    background-color: #3dc7ef;
 }
 .poison {
-  background-color: #b97fc9;
+    background-color: #b97fc9;
 }
 .ground {
-  background-color: #f7de3f;
+    background-color: #f7de3f;
 }
 .rock {
-  background-color: #a38c21;
+    background-color: #a38c21;
 }
 .bug {
-  background-color: #729f3f;
+    background-color: #729f3f;
 }
 .ghost {
-  background-color: #7b62a3;
+    background-color: #7b62a3;
 }
 .electric {
-  background-color: #eed535;
+    background-color: #eed535;
 }
 .psychic {
-  background-color: #f366b9;
+    background-color: #f366b9;
 }
 .ice {
-  background-color: #51c4e7;
+    background-color: #51c4e7;
 }
 .dragon {
-  background-color: #53a4cf;
+    background-color: #53a4cf;
 }
 .dark {
-  background-color: #707070;
+    background-color: #707070;
 }
 .steel {
-  background-color: #9eb7b8;
+    background-color: #9eb7b8;
 }
 .fairy {
-  background-color: #fdb9e9;
+    background-color: #fdb9e9;
 }
 
-.form_container{
-  width: 50%;
-  margin-bottom: 25px;
+.form_container {
+    width: 50%;
+    margin-bottom: 25px;
 
-  input{
-    width: 100%;
-    height: 40px;
-    border-radius: 8px;
-    border: 1px solid #333333;
-    padding: 0 15px;
-  }
+    input {
+        width: 100%;
+        height: 40px;
+        border-radius: 8px;
+        border: 1px solid #333333;
+        padding: 0 15px;
+    }
 }
 
 .loadings {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  width: fit-content;
-  margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: fit-content;
+    margin: 0 auto;
 
-  .text-loading {
-    color: #8c200f;
+    .text-loading {
+        color: #8c200f;
 
-    &:first-child {
-      animation: 1s loadingText linear infinite;
-    }
+        &:first-child {
+            animation: 1s loadingText linear infinite;
+        }
 
-    &:nth-of-type(2) {
-      animation: 1s loadingText linear infinite;
-      animation-delay: 0.125s;
-    }
+        &:nth-of-type(2) {
+            animation: 1s loadingText linear infinite;
+            animation-delay: 0.125s;
+        }
 
-    &:nth-of-type(3) {
-      animation: 1s loadingText linear infinite;
-      animation-delay: 0.25s;
-    }
+        &:nth-of-type(3) {
+            animation: 1s loadingText linear infinite;
+            animation-delay: 0.25s;
+        }
 
-    &:nth-of-type(4) {
-      animation: 1s loadingText linear infinite;
-      animation-delay: 0.375s;
-    }
+        &:nth-of-type(4) {
+            animation: 1s loadingText linear infinite;
+            animation-delay: 0.375s;
+        }
 
-    &:nth-of-type(5) {
-      animation: 1s loadingText linear infinite;
-      animation-delay: 0.5s;
-    }
+        &:nth-of-type(5) {
+            animation: 1s loadingText linear infinite;
+            animation-delay: 0.5s;
+        }
 
-    &:nth-of-type(6) {
-      animation: 1s loadingText linear infinite;
-      animation-delay: 0.625s;
-    }
+        &:nth-of-type(6) {
+            animation: 1s loadingText linear infinite;
+            animation-delay: 0.625s;
+        }
 
-    &:nth-of-type(7) {
-      animation: 1s loadingText linear infinite;
-      animation-delay: 0.75s;
+        &:nth-of-type(7) {
+            animation: 1s loadingText linear infinite;
+            animation-delay: 0.75s;
+        }
+        &:nth-of-type(8) {
+            animation: 1s loadingText linear infinite;
+            animation-delay: 0.875s;
+        }
+        &:nth-of-type(9) {
+            animation: 1s loadingText linear infinite;
+            animation-delay: 0.895s;
+        }
+        &:nth-of-type(10) {
+            animation: 1s loadingText linear infinite;
+            animation-delay: 1s;
+        }
     }
-    &:nth-of-type(8) {
-      animation: 1s loadingText linear infinite;
-      animation-delay: 0.875s;
-    }
-    &:nth-of-type(9) {
-      animation: 1s loadingText linear infinite;
-      animation-delay: 0.895s;
-    }
-    &:nth-of-type(10) {
-      animation: 1s loadingText linear infinite;
-      animation-delay: 1s;
-    }
-  }
 }
 
 .loader {
-  display: flex;
-  align-items: flex-end;
-  gap: 1rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
 }
 
 .pikachu {
-  position: relative;
-  animation: 10s run linear infinite;
+    position: relative;
+    animation: 10s run linear infinite;
 
-  img {
-    height: 5rem;
-  }
+    img {
+        height: 5rem;
+    }
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 2px;
-    left: -125%;
-    width: 150%;
-    height: 2px;
-    background: rgb(247, 233, 1);
-    background: linear-gradient(
-      90deg,
-      rgba(247, 233, 1, 0) 0%,
-      rgba(247, 233, 1, 0.1829774145986519) 30%,
-      rgba(247, 233, 1, 0.7011846975118172) 70%,
-      rgba(247, 233, 1, 1) 100%
-    );
-  }
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: -125%;
+        width: 150%;
+        height: 2px;
+        background: rgb(247, 233, 1);
+        background: linear-gradient(
+            90deg,
+            rgba(247, 233, 1, 0) 0%,
+            rgba(247, 233, 1, 0.1829774145986519) 30%,
+            rgba(247, 233, 1, 0.7011846975118172) 70%,
+            rgba(247, 233, 1, 1) 100%
+        );
+    }
 }
 
 @keyframes run {
-  0% {
-    transform: translateX(-500px);
-  }
-  100% {
-    transform: translateX(1300px);
-  }
+    0% {
+        transform: translateX(-500px);
+    }
+    100% {
+        transform: translateX(1300px);
+    }
 }
 
 @keyframes roll {
-  0% {
-    transform: translateX(-1000px) rotate(0);
-  }
-  100% {
-    transform: translateX(1500px) rotate(3turn);
-  }
+    0% {
+        transform: translateX(-1000px) rotate(0);
+    }
+    100% {
+        transform: translateX(1500px) rotate(3turn);
+    }
 }
 
 @keyframes loadingText {
-  0%,
-  100% {
-    tranform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-  
-  @media (max-width: 600px) {
-    .grid {
-      width: 100%;
-      flex-direction: column;
+    0%,
+    100% {
+        tranform: translateY(0);
     }
-  }
-  
-  @media (prefers-color-scheme: dark) {
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
     .card,
     .footer {
-      border-color: #222;
+        border-color: #222;
     }
     .code {
-      background: #111;
+        background: #111;
     }
     .logo img {
-      filter: invert(1);
+        filter: invert(1);
     }
-  }
-  
+}
